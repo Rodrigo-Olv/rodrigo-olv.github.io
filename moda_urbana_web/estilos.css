@@ -1,0 +1,476 @@
+:root {
+    --negro: #1d1d1d;
+    --azul-oscuro: #26355D;
+    --azul-neon: #2272FF;
+    --rosa: #AF47D2;
+    --naranja: #FF8F00;
+    --amarillo: #FFDB00;
+    --fondo: #438a68;
+
+    --fuente-encabezados: 'Urbanist', sans-serif;
+    --fuente-texto: 'Montserrat', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5{
+    font-family: var(--fuente-encabezados);
+}
+h3{
+    font-size: 22px;
+    font-family: var(--fuente-encabezados);
+}
+/* Reset de estilos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* Estilo para el body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, transparent, #aaaaaa);
+    background-attachment: fixed;
+    background-size: 100vmax;
+    background-repeat: no-repeat;
+}
+.body-ajustado{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.contenido{
+    flex: 1;
+}
+.fondo-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--negro));
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Para que no tape el contenido */
+  }
+.div-img-home{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-home{
+    width: 100%;         /* La imagen ocupa el ancho completo del div */
+    height: 100%;        /* La imagen ocupa el alto completo del div */
+    object-fit: cover;
+}
+
+/* Estilo para enlaces */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none; /* Subrayar al pasar el ratón */
+    color: var(--negro);
+}
+
+/* Estilo para el encabezado */
+
+#categorias{
+    display: inline-block;
+}
+.enlace-inicio{
+    display: flex;
+    justify-content: center;
+}
+.enlace-inicio, h1{
+    color: black;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.logo_header{
+    width: 60px;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.header{
+
+    padding: 20px 0; /* Espaciado */
+    
+    align-items:center;
+    justify-content: center;
+}
+.texto-nav{
+    color: var(--negro);
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    font-weight: bold;
+}
+.no_margin{
+    margin: 0;
+}
+.navegacion{
+    display: flex;
+    justify-content: center;
+}
+#categorias{
+    margin-right: 20px;
+}
+
+
+header nav ul {
+    list-style: none; /* Quitar puntos de la lista */
+    display: flex; /* Diseño en fila */
+    justify-content: center; /* Alinear a la izquierda */
+}
+
+header nav ul li {
+    margin-right: 20px; /* Espacio entre elementos de la lista */
+    color: white;
+}
+/* Estilos para el contenedor del desplegable */
+details.texto-nav {
+    position: relative; /* Para posicionar el desplegable encima */
+    display: inline-block;
+}
+
+/* Estilos para el contenido desplegable */
+details.texto-nav[open] ul {
+    position: absolute; /* Coloca el contenido sobre el resto */
+    top: 100%; /* Coloca el menú justo debajo del botón de categorías */
+    left: 0;
+    margin: 0;
+    
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    list-style: none;
+    z-index: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    columns: 1;
+    gap: 2px;
+}
+
+/* Alineación vertical de los elementos */
+details.texto-nav ul li {
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para los enlaces */
+details.texto-nav ul li a {
+    color: #242424;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+details.texto-nav ul li a:hover {
+    text-decoration: none;
+    color: #4f4f4f;
+}
+details.texto-nav ul li:hover{
+    background-color: #d7d7d7;
+}
+
+
+/* Estilo para formularios */
+form {
+    display: flex; /* Diseño flexible */
+    flex-wrap: wrap; /* Permitir el ajuste de líneas */
+    gap: 10px; /* Espacio entre elementos del formulario */
+    margin-left: 3%; /* Espaciado vertical */
+    margin-top: 2%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    justify-content: center;
+    
+}
+form label{
+   font-size: 18px; 
+   font-family: var(--fuente-encabezados);
+   font-weight: 500;
+   padding-left: 10px;
+   display: flex;
+   align-self: center;
+}
+form input,
+form select,
+form button {
+    padding: 7px 15px 7px 15px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-size: 16px; 
+}
+
+/* Estilo para el botón */
+form button {
+    background-color: var(--negro); /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+summary:hover{
+    cursor:pointer;
+}
+/* Estilo para el catálogo de productos */
+
+.catalogo {
+    display: grid; /* Diseño en cuadrícula */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas automáticas */
+    gap: 10px; /* Espacio entre productos */
+    margin: 2% 26%; /* Espaciado alrededor del catálogo */
+}
+
+/* Estilo para cada ficha de producto */
+.producto-ficha {
+    width: 90%;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    padding-top: 20px;
+    text-align: center; /* Centrar texto */
+    transition: transform 0.2s; /* Transición al escalar */
+    overflow: hidden; /* Ocultar contenido que se desborda */
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.producto-ficha a{
+    color: #1d1d1d;
+    font-family: var(--fuente-texto);
+    text-transform: capitalize;
+    font-size: 18px;
+
+}
+.producto-ficha:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+/* Estilo para la imagen del producto */
+.producto-imagen {
+    width: 80%; /* Ancho máximo */
+    height: 350px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajustar la imagen para cubrir el área sin deformarse */
+    border-radius: 10px;
+}
+
+/*Estilos para ficha_producto.php */
+
+.producto-detalle{
+    margin:7% 0%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 2%;
+    background-color: #eeeeee;
+    color: var(--negro);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.producto-imagen-detalle{
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+#nombre-producto{
+    font-family: var(--fuente-encabezados);
+    font-size: 42px;
+    margin-bottom: 20px;
+    
+}
+#opciones-talla{
+    font-family: var(--fuente-encabezados);
+    font-size: 22px;
+    
+}
+.producto-info select{
+    font-size: 22px;
+}
+.producto-info{
+    max-width: 70rem;
+}
+#opciones-talla{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#opciones-color{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#encabezado-precio{
+    margin-top: 20px;
+    font-size: 28px;
+}
+#select-color{
+    padding: 2px;
+}
+#select-talla{
+    padding: 2px;
+}
+
+#btnAñadirCarrito{
+    font-size: 18px;
+    font-family: var(--fuente-encabezados);
+    font-weight: bold;
+    background-color: var(--negro);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#btnAñadirCarrito:hover{
+    cursor: pointer;
+    background-color: #333;
+}
+
+/*Estilos para carrito.php*/
+
+.fondo-carrito{
+    margin:7% 0%;
+    display: grid;
+    columns: 1;
+    gap: 5%;
+    padding: 2% 6% 5% 6%;
+    background-color: #eeeeee;
+    color: var(--negro);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.boton-pago{
+    font-size: 18px;
+    font-family: var(--fuente-encabezados);
+    font-weight: bold;
+    background-color: var(--negro);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin: auto;
+}
+.boton-pago:hover{
+    cursor: pointer;
+    background-color: #333;
+}
+
+.fondo-carrito th, td{
+    text-align: center;
+    padding: 8px;
+}
+.fondo-carrito table{
+    border-collapse: collapse;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-seccion {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-seccion h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.footer-seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-seccion ul li {
+    margin: 5px 0;
+}
+
+.footer-seccion ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-seccion ul li a:hover {
+    text-decoration: underline;
+}
+
+.sociales {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sociales li {
+    margin: 0 10px;
+}
+
+.footer-derechos {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.formulario-contacto{
+    display: flex;
+    justify-content: left;
+}
+
+/* Contenedor del slider */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+  }
+  
+  /* Contenedor de las imágenes */
+  .slides {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transición suave */
+  }
+  
+  /* Estilo de las imágenes */
+  .slides img {
+    width: 100vw;
+    height: auto;
+  }
+
+/*estilo para login.php */
+
+.inicio-sesion{
+    margin-left: 3%;
+    padding: 0;
+}
+.formulario-login{
+    justify-content: left;
+}
+
+#volver{
+    margin-left: 3%;
+}
